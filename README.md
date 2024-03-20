@@ -9,9 +9,9 @@
 
 Before getting started make sure the following utilities are present:
 
-* One
-* Two
-* Three
+* this-utilty
+* that-utility
+* another-utility
 
 ## Usage
 
