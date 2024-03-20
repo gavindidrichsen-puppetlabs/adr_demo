@@ -18,10 +18,10 @@ Before getting started make sure the following utilities are present:
 
 ## Usage
 
-To use this repo do the following:
+### Initialize your repository to use ADR:
 
 ```bash
-# cd into this directory
+# cd into your repo root
 
 # if not done already, then initialize the ADR document directory
 adr init
@@ -29,8 +29,25 @@ adr init
 # create an ADR record
 adr new "Do whiteboard wednesday talks" 
 
-# answer the questions: context? decision? consequences?
+# open the document and answer the questions: context? decision? consequences?
 code doc/adr/0002-do-whiteboard-wednesday-talks.md
+```
+
+### Add decision 'table of contents'
+
+To inject a decision table of contents, you need to add the following `adrlog` tags to a document of your choice.  For example, to add a table of contents to my top-level `README.md`, add something like the following:
+
+```markdown
+## Decisions
+
+<!-- adrlog -->
+<!-- adrlogstop -->
+```
+
+Then run the following command which will inject each ADR title as a hyperlink.  This current document contains its own list of decisions.
+
+```bash
+adr-log -i README.md -d doc
 ```
 
 ## References
