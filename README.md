@@ -1,4 +1,4 @@
-# adr_demo
+# Architectural Design Decisions (ADR)
 
 The following is [Andy Dote's](https://andydote.co.uk/2019/06/29/architecture-decision-records/) summary of Architectural Design Decisions:
 
@@ -8,16 +8,18 @@ The following is [Andy Dote's](https://andydote.co.uk/2019/06/29/architecture-de
 >
 > Generally speaking, architectural decisions have been made in good faith at the time, but as time marches on, things change, and the reasoning gets lost. The reasoning might be discoverable through the commit history, or some comments in a type somewhere, and every once in a while, people remember the Wiki exists, and hope that someone else remembered and put some docs there. They didn’t by the way.
 >
-> Architecture Design Records are aiming to solve all of this, with three straightforward attributes: Easy to Write, Easy to Read, and Easy to Find. Let’s look at these on their own, and then have a look at an example.
+> Architecture Design Records are aiming to solve all of this, with three straightforward attributes: **Easy to Write**, **Easy to Read**, and **Easy to Find**.
 
 To find out more about ADR, see the [References section below](#references).
 
-## Design Decisions
+## Design Decisions (Examples)
+
+The following are included not only as examples but also to show how to use the ``adrlog`` and ``adrlogstop`` tags.  The [ADR-0003](doc/adr/0003-this-is-a-clean-adr.md) is included to illustrate a "clean" template with placeholder question.  The other two are basic examples.
 
 <!-- adrlog -->
 
 * [ADR-0001](doc/adr/0001-record-architecture-decisions.md) - Record architecture decisions
-* [ADR-0002](doc/adr/0002-do-whiteboard-wednesday-talks.md) - Do whiteboard wednesday talks
+* [ADR-0002](doc/adr/0002-dry-up-duplicated-code-in-github-actions.md) - Dry up duplicated code in github actions
 
 <!-- adrlogstop -->
 
@@ -30,7 +32,7 @@ Before getting started make sure the following utilities are present:
 
 ## Usage
 
-### Initialize your repository to use ADR:
+### Initialize your repository to use ADR
 
 ```bash
 # cd into your repo root
@@ -47,12 +49,7 @@ code doc/adr/0002-do-whiteboard-wednesday-talks.md
 
 ### Add decision 'table of contents'
 
-To inject a decision table of contents, you need to add the following `adrlog` tags to a document of your choice.  For example, to add a table of contents to my top-level `README.md`, add something like the following:
-
-```markdown
-<!-- adrlog -->
-<!-- adrlogstop -->
-```
+To inject a decision table of contents, you need to add the following `adrlog` tags to a document of your choice.  For example, to add a table of contents to my top-level `README.md`, add the ``adrlog`` and ``adrlogstop`` tags as in the [Example Design Decisions section above](#design-decisions-examples).
 
 Then run the following command which will inject each ADR title as a hyperlink.
 
