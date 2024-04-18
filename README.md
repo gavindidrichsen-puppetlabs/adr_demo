@@ -28,24 +28,19 @@ Before getting started make sure the following utilities are present:
 
 # if not done already, then initialize the ADR document directory
 adr init
-
-# create an ADR record
-adr new "Do whiteboard wednesday talks" 
-
-# open the document and answer the questions: context? decision? consequences?
-code doc/adr/0002-do-whiteboard-wednesday-talks.md
 ```
 
 ### (2) Create a new decision
 
 ```bash
-# create a new design decision
-adr new "Title of your design decision"
+# create a new design decision, e.g., `adr new "Title of your design decision"`
+adr new "Do whiteboard wednesday talks" 
 
 # fill in the "Context", "Decision", and "Consequences" of the new doc
+vim doc/adr/0002-do-whiteboard-wednesday-talks.md
 ```
 
-### (3) Add a 'table of contents' for your design decisions
+### (3) Add a 'table of contents' for your design decisions to your root-level README
 
 The following are sample ADR decisions for reference:
 
@@ -60,7 +55,7 @@ View the raw markdown to see the `adrlog` and `adrlogstop` tags.  The above list
 
 ### (4) Update the decision 'table of contents'
 
-Do the following to update the list of design decisions:
+After adding new design decision records, then remember to update the table of contents in the root-level README:
 
 ```bash
 # update the `README.md` table of contents to include the newest design decision
