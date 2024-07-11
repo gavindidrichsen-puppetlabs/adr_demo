@@ -27,7 +27,7 @@ Before getting started make sure the following utilities are present:
 # cd into your repo root
 
 # if not done already, then initialize the ADR document directory
-adr init
+adr init doc/adr
 ```
 
 ### (2) Create a new decision
